@@ -2,6 +2,8 @@ package com.example.signup_login_realtime;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,12 +39,20 @@ public class  SignupActivity   extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Validate email using regular expression
+                String email = signupEmail.getText().toString().trim();
+                if (!isValidEmail(email)) {
+                    signupEmail.setError("Invalid email address");
+                    signupEmail.requestFocus();
+                    return;
+                }
+
                 database = FirebaseDatabase.getInstance();
                 reference = database.getReference("users");
-                
+
 
                 String name = signupName.getText().toString();
-                String email = signupEmail.getText().toString();
+                email = signupEmail.getText().toString();
                 String username = signupUsername.getText().toString();
                 String password = signupPassword.getText().toString();
 
@@ -62,5 +72,10 @@ public class  SignupActivity   extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    // Method to validate
+    private boolean isValidEmail(CharSequence target) {
+        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 }

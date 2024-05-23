@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Add Event Input Fields -->
+    <EditText
+        android:drawableLeft="@drawable/baseline_assignment_24"
+        android:id="@+id/editTextEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Name"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:drawableLeft="@drawable/baseline_view_timeline_24"
+        android:id="@+id/editTextSessions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sessions"
+        android:layout_below="@id/editTextEventName"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:drawableLeft="@drawable/baseline_person_3_24"
+        android:id="@+id/editTextSpeakers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSessions"
+        android:layout_margin="16dp"
+        android:hint="Speakers" />
+
+    <EditText
+        android:drawableLeft="@drawable/baseline_access_time_24"
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:layout_below="@id/editTextSpeakers"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:drawableLeft="@drawable/baseline_place_24"
+        android:id="@+id/editTextPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Place"
+        android:layout_below="@id/editTextTime"
+        android:layout_margin="16dp" />
+
+    <!-- RecyclerView -->
+
+    <Button
+        android:id="@+id/buttonAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPlace"
+        android:layout_margin="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/lavender"
+        android:text="Add Event" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonAddEvent"
+        android:layout_marginTop="16dp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/buttonViewEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddEvent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-61dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="@color/lavender"
+        android:text="View Events" />
+
+
+</RelativeLayout>

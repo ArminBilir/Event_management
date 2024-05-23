@@ -12,8 +12,10 @@
         android:id="@+id/buttonOrganizer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonUser"
-        android:layout_marginTop="69dp"
+        android:layout_alignEnd="@+id/buttonUser"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-23dp"
+        android:layout_marginBottom="276dp"
         android:text="Organizer" />
 
 </RelativeLayout>

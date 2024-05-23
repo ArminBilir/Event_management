@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/buttonStudent"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/lavender"
+        android:onClick="onStudentButtonClick"
+        android:text="@string/student"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/buttonOrganizer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="@string/organizator"
+        android:layout_margin="5dp"
+        android:onClick="onOrganizerButtonClick"
+        android:backgroundTint="@color/lavender"/>
+
+</LinearLayout>
